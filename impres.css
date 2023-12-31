@@ -21,7 +21,7 @@ body{
 .heart:hover{
     
     background: red;
-    box-shadow: 0px  0px 90px red;
+    box-shadow: 0px  0px 190px red;
     animation: heart2 0.3s linear infinite;
 } 
 @keyframes heart2 {
