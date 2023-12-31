@@ -1,0 +1,82 @@
+body{
+    background-color: #161521;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+} 
+.heart{
+    height: 100px;
+    width: 100px;
+    background: rgb(254, 85, 142);
+    transform: rotate(-45deg);
+    position: relative;
+    transition: 0.35s;
+    animation: heart 1s linear infinite;
+    box-shadow: 0px  0px 140px rgb(254, 85, 142);
+}
+.heart:hover{
+    
+    background: red;
+    box-shadow: 0px  0px 90px red;
+    animation: heart2 0.3s linear infinite;
+} 
+@keyframes heart2 {
+    0%{
+        transform: rotate(-45deg) scale(1.2);
+    }80%{
+        transform: rotate(-45deg) scale(1.02 );
+    }100%{
+        transform: rotate(-45deg) scale(0.9);
+    }
+}
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.08);
+    }80%{
+        transform: rotate(-45deg) scale(1.0 );
+    }100%{
+        transform: rotate(-45deg) scale(0.85);
+    }
+}
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: rgb(254, 85, 142); 
+    top: -50%;
+    transition: 0.35s;
+    border-radius: 50px;
+}
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px; 
+    transition: 0.35s;
+    background: rgb(254, 85, 142);
+    right: -50%;
+    border-radius: 50px;
+}
+.heart:hover:before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red; 
+    top: -50%;
+    border-radius: 50px;
+}
+.heart:hover:after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px; 
+    background: red;
+    right: -50%;
+    border-radius: 50px;
+}
